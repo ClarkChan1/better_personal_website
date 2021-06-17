@@ -1,0 +1,227 @@
+html {
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Nixie One', cursive;
+  font-family: 'VT323', monospace;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+
+body {
+  /* this is to get rid of the default margins that come with the body, there was basically a white border I wanted to remove */
+  margin: 0;
+  background-color: black;
+}
+
+#navbar {
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: #222831;
+  z-index: 10;
+}
+
+#navbar ul {
+  list-style-type: none;
+}
+
+#navbar li {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* welcome section */
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 1300px;
+  margin: auto;
+  width: 960px;
+  background-color: black;
+}
+
+.intro {
+  text-align: center;
+  /* background-color: green; */
+  padding-top: 100px;
+  padding-bottom: 100px;
+  z-index: 1;
+  animation-name: glowing-name;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+}
+
+@keyframes glowing-name {
+  50% {
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
+  }
+}
+
+#welcome-section h1 {
+  font-size: 50px;
+  /*   background-color:green; */
+}
+
+#welcome-section p {
+  font-size: 20px;
+}
+
+/* computer setup art */
+.computer-art-container {
+  background-color: cyan;
+  height: 720px;
+  width: 960px;
+  /* we want all the children to be positioned relative to the top left corner of this container, and the way absolute positioning works
+  is that it uses the first parent with a relative or absolute position, so if this wasn't here, and all the children used absolute positioning, the top left corner would be
+  the top left of the entire screen, not the top left of this container, which is what we want */
+  position: relative;
+}
+
+/* this is everything within computer-setup-art */
+.computer-art-container * {
+  position: absolute;
+}
+
+.desk {
+  top: 520px;
+  height: 200px;
+  width: 960px;
+  background-color: teal;
+}
+
+.desk .surface {
+  height: 20px;
+  width: 960px;
+  background-color: #99602d;
+  border-radius: 5px;
+}
+
+.desk .legs {
+  top: 20px;
+  left: 130px;
+  height: 20px;
+  width: 700px;
+  background-color: #26373f;
+  border-radius: 5px;
+  border-top: 5px black solid;
+}
+
+.desk .legs::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  height: 150px;
+  width: 50px;
+  background-color: #26373f;
+  border-radius: 5px;
+  border-top: 5px black solid;
+}
+
+.desk .legs::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 640px;
+  height: 150px;
+  width: 50px;
+  background-color: #26373f;
+  border-radius: 5px;
+  border-top: 5px black solid;
+}
+
+.desk-content {
+  height: 520px;
+  width: 960px;
+  background-color: rgb(245, 159, 237);
+}
+
+.desk-content .computer-screen {
+  position:absolute;
+  
+  height: 100px;
+  width: 200px;
+  border: 15px solid rgb(80, 80, 80);
+  border-radius: 5px;
+}
+
+.desk-content .monitor-stand {
+  position: relative;
+  top: 500px;
+  left: 430px;
+  height: 10px;
+  width: 100px;
+  background-color: white;
+  border-radius: 40px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 0;
+}
+
+.desk-content .monitor-stand::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  height: 20px;
+  width: 50px;
+  background-color: #f2eee5;
+  border-bottom: 2px solid #d4d1ca;
+  border-top: 2px solid #d4d1ca;
+  z-index: 0;
+}
+
+.desk-content .monitor-stand::after {
+  content: "";
+  position: absolute;
+  bottom: 34px;
+  left: -75px;
+  height: 30px;
+  width: 250px;
+  background-color: white;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  z-index: 0;
+}
+
+.desk-content .monitor-stand .dot {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  left: 42px;
+  bottom: 42px;
+  border-radius: 50%;
+  background-color: rgb(55, 55, 55);
+  z-index: 1;
+}
+
+.desk-content .keyboard {
+  top: 510px;
+  left: 400px;
+  height: 10px;
+  width: 200px;
+  background-color: rgb(55, 55, 55);
+}
+
+.nuka-cola {}
+
+/* projects section */
+#projects {
+  background-color: purple;
+  height: 100vh;
+  width: 100%;
+}
+
+/* contact section */
+#contact {
+  background-color: green;
+  height: 100vh;
+  width: 100%;
+}
