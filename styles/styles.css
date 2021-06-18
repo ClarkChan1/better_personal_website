@@ -52,14 +52,27 @@ body {
   padding-bottom: 100px;
   z-index: 1;
   animation-name: glowing-name;
-  animation-duration: 2000ms;
+  animation-duration: 4000ms;
   animation-iteration-count: infinite;
-  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
 }
 
 @keyframes glowing-name {
-  50% {
+  2.5% {
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+    opacity:0.2;
+  }
+  5%{
     text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
+    opacity:1;
+  }
+  7.5% {
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+    opacity:0.2;
+  }
+  10%{
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
+    opacity:1;
   }
 }
 
@@ -74,7 +87,7 @@ body {
 
 /* computer setup art */
 .computer-art-container {
-  background-color: cyan;
+  /* background-color: cyan; */
   height: 720px;
   width: 960px;
   /* we want all the children to be positioned relative to the top left corner of this container, and the way absolute positioning works
@@ -92,7 +105,7 @@ body {
   top: 520px;
   height: 200px;
   width: 960px;
-  background-color: teal;
+  /* background-color: teal; */
 }
 
 .desk .surface {
@@ -139,7 +152,7 @@ body {
 .desk-content {
   height: 520px;
   width: 960px;
-  background-color: rgb(245, 159, 237);
+  /* background-color: rgb(245, 159, 237); */
 }
 
 .desk-content .computer-screen {
@@ -155,6 +168,7 @@ body {
   border-top-right-radius: 17px;
   border-top-left-radius: 17px;
 }
+
 
 .desk-content .monitor-stand {
   position: relative;
@@ -217,125 +231,194 @@ body {
 
 .desk-content .speakers {
   position: absolute;
-  top:415px;
-  left:250px;
+  top: 415px;
+  left: 250px;
   height: 100px;
   width: 75px;
   background-color: #26373e;
-  border-radius:8px;
-  z-index:0;
+  border-radius: 8px;
+  z-index: 0;
 }
 
 .desk-content .speakers::before {
-  content:"";
+  content: "";
   position: absolute;
-  top:100px;
-  left:10px;
+  top: 100px;
+  left: 10px;
   height: 5px;
   width: 20px;
   background-color: #1e282d;
-  border-radius:8px;
-  z-index:0;
+  border-radius: 8px;
+  z-index: 0;
 }
 
 .desk-content .speakers::after {
-  content:"";
+  content: "";
   position: absolute;
-  top:100px;
-  left:45px;
+  top: 100px;
+  left: 45px;
   height: 5px;
   width: 20px;
   background-color: #1e282d;
-  border-radius:8px;
-  z-index:0;
+  border-radius: 8px;
+  z-index: 0;
 }
 
 .desk-content .speakers .little-circle {
-  position:absolute;
-  left:23px;
-  top:10px;
-  height:30px;
-  width:30px;
-  border-radius:50%;
+  position: absolute;
+  left: 23px;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
   background-color: #1a232a;
-  z-index:1;
+  z-index: 1;
 }
 
 .desk-content .speakers .little-circle::before {
-  content:"";
-  position:absolute;
-  left:5px;
-  top:5px;
-  height:20px;
-  width:20px;
-  border-radius:50%;
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
   background-color: white;
-  z-index:2;
+  z-index: 2;
 }
 
 .desk-content .speakers .little-circle::after {
-  content:"";
-  position:absolute;
-  left:10px;
-  top:10px;
-  height:10px;
-  width:10px;
-  border-radius:50%;
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
   background-color: #446b7f;
-  z-index:3;
+  z-index: 3;
 }
 
 .desk-content .speakers .big-circle {
-  position:absolute;
-  left:13px;
-  top:40px;
-  height:50px;
-  width:50px;
-  border-radius:50%;
+  position: absolute;
+  left: 13px;
+  top: 40px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
   background-color: #1a232a;
-  z-index:1;
+  z-index: 1;
 }
 
 .desk-content .speakers .big-circle::before {
-  content:"";
-  position:absolute;
-  left:5px;
-  top:5px;
-  height:40px;
-  width:40px;
-  border-radius:50%;
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
   background-color: white;
-  z-index:2;
+  z-index: 2;
 }
 
 .desk-content .speakers .big-circle::after {
-  content:"";
-  position:absolute;
-  left:15px;
-  top:15px;
-  height:20px;
-  width:20px;
-  border-radius:50%;
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
   background-color: #446b7f;
-  z-index:3;
+  z-index: 3;
 }
 
-#speakers2{
-  left:650px;
+#speakers2 {
+  left: 650px;
 }
 
-.desk-content .mouse{
-  top:500px;
-  left:602px;
-  height:20px;
-  width:40px;
-  background:white;
+.desk-content .mouse {
+  top: 500px;
+  left: 602px;
+  height: 20px;
+  width: 40px;
+  background: white;
   border-radius: 70% 70% 35% 35%;
   box-shadow: inset -8px 1px rgb(230, 230, 230);
-  z-index:0;
+  z-index: 0;
 }
 
-.nuka-cola {}
+.nuka-cola {
+  left: 750px;
+  top: 449px;
+  height: 70px;
+  width: 30px;
+  /* background-color:yellow; */
+}
+
+.nuka-cola .bottom {
+  position: relative;
+  height: 70px;
+  width: 30px;
+  z-index: 0;
+  background: #63edf0;
+  border-radius: 40% 40% 20% 20% / 30% 30% 20% 20%;
+  z-index: 0;
+  box-shadow: 0 0 10px #63edf0;
+  border:1px solid white;
+  /* border-top:0px none white; */
+}
+
+
+.nuka-cola .top {
+  position: absolute;
+  left: 9px;
+  top: -38px;
+  height: 40px;
+  width: 12px;
+  background: #63edf0;
+  /* background: #63edf0; */
+  z-index: 1;
+  box-shadow: 0 0 10px #63edf0;
+  border:1px solid white;
+  border-top: 0px none transparent;
+  border-bottom: 0px none transparent;
+}
+
+.nuka-cola .top::before {
+  content:"";
+  position: absolute;
+  top:-5px;
+  left:-1px;
+  height: 5px;
+  width: 14px;
+  /* background-image:linear-gradient(rgb(98, 237, 240, 0), rgb(98, 237, 240)); */
+  background: #8f8f8f;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  z-index: 0;
+}
+
+.nuka-cola .top, .nuka-cola .bottom{
+  animation-name: glowing-bottle;
+  animation-duration:1000ms;
+  animation-iteration-count:infinite;
+}
+
+@keyframes glowing-bottle {
+  50% {
+    box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0;
+  }
+}
+
+.nuka-cola .sticker {
+  top: 20px;
+  left:1px;
+  height: 35px;
+  width: 30px;
+  z-index: 1;
+}
 
 /* projects section */
 #projects {
