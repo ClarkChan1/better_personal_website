@@ -681,7 +681,81 @@ body {
   background:white;
 }
 
+.lamp .arm2{
+  position:absolute;
+  top:-25px;
+  left:48px;
+  height:100px;
+  width:12px;
+  transform: skew(-30deg);
+  background:#25373e;
+  z-index:0;
+}
 
+.lamp .arm2::before{
+  content:"";
+  position:absolute;
+  top:-10px;
+  left:-8px;
+  height:25px;
+  width:25px;
+  transform: skew(30deg);
+  border-radius: 50%;
+  background:#cb5c50;
+}
+
+.lamp .arm2::after{
+  content:"";
+  position:absolute;
+  top:-5px;
+  left:-3px;
+  height:15px;
+  width:15px;
+  transform: skew(30deg);
+  border-radius: 50%;
+  background:white;
+}
+
+.lamp .head{
+  transform: rotate(45deg);
+  top:-60px;
+  left:74px;
+  height:45px;
+  width:45px;
+  border-radius: 15%;
+  background:#cc584b;
+}
+
+.lamp .head::before{
+  content:"";
+  position:absolute;
+  transform: rotate(-90deg);
+  left:22px;
+  top:6px;
+  border-bottom: 32px solid #bd5044;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	height: 0;
+	width: 45px;
+}
+
+.lamp .head .ridge {
+  height:12px;
+  width:5px;
+  border-radius:10px;
+  background:#984039;
+}
+
+.lamp .light{
+  left:125px;
+  top:-3px;
+  height:10px;
+  width:20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform:rotate(-45deg);
+  background:rgb(211, 211, 211);
+}
 
 /* projects section */
 #projects {
