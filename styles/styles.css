@@ -485,7 +485,7 @@ body {
 @keyframes glowing-bottle-top {
   50% {
     /* box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, 0 0 10px white; */
-    box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, inset 0 0 10px white, inset 0 0 15px white;    
+    box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, inset 0 0 10px white, inset 0 0 15px white;
   }
 }
 
@@ -515,13 +515,15 @@ body {
 .minecraft-head .eye-white {
   height: 8px;
   width: 24px;
-  background-color: #fe9ce7;
+  background-color: #e07afa;
+  /* box-shadow: 0px 0px 5px #e07afa; */
 }
 
 .minecraft-head .eye-pupil {
   height: 8px;
   width: 8px;
-  background-color: #fe39bd;
+  background-color: #cd00fc;
+  /* box-shadow: 0px 0px 5px #cd00fc; */
 }
 
 .minecraft-head .decal1 {
@@ -611,6 +613,75 @@ body {
   top: 140px;
   left: 680px;
 }
+
+.desk-content .lamp{
+  position:absolute;
+  top:320px;
+  left:120px;
+  height:200px;
+  width:100px;
+  background:pink;
+}
+
+.lamp .base{
+  position:absolute;
+  top:190px;
+  left:30px;
+  height:10px;
+  width:70px;
+  border-radius:4px;
+  background:#992b1f;
+}
+
+.lamp .base::before{
+  content:"";
+  position:absolute;
+  top:-25px;
+  left:10px;
+  height:25px;
+  width:50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background:#cc584b;
+  z-index:1;
+}
+
+.lamp .arm1{
+  position:absolute;
+  top:70px;
+  left:40px;
+  height:100px;
+  width:10px;
+  transform: skew(20deg);
+  background:#25373e;
+  z-index:0;
+}
+
+.lamp .arm1::before{
+  content:"";
+  position:absolute;
+  top:-10px;
+  left:-8px;
+  height:25px;
+  width:25px;
+  transform: skew(-20deg);
+  border-radius: 50%;
+  background:#cb5c50;
+}
+
+.lamp .arm1::after{
+  content:"";
+  position:absolute;
+  top:-5px;
+  left:-3px;
+  height:15px;
+  width:15px;
+  transform: skew(-20deg);
+  border-radius: 50%;
+  background:white;
+}
+
+
 
 /* projects section */
 #projects {
