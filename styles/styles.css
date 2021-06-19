@@ -58,10 +58,11 @@ body {
 }
 
 @keyframes glowing-name {
-  20%{
+  20% {
     text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
     opacity: 0.5;
   }
+
   21% {
     text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
     opacity: 0;
@@ -237,49 +238,60 @@ body {
   height: 10px;
   width: 200px;
   background-color: rgb(55, 55, 55);
-  box-shadow:0px -5px 10px red;
+  box-shadow: 0px -5px 10px red;
   animation-name: keyboard-rainbow;
   animation-duration: 10000ms;
   animation-iteration-count: infinite;
 }
 
 @keyframes keyboard-rainbow {
-  100%,0%{
-      box-shadow:0px -5px 10px rgb(255,0,0);
-		}
-		8%{
-      box-shadow:0px -5px 10px rgb(255,127,0);
-		}
-		16%{
-			box-shadow:0px -5px 10px rgb(255,255,0);
-		}
-		25%{
-			box-shadow:0px -5px 10px rgb(127,255,0);
-		}
-		33%{
-			box-shadow:0px -5px 10px rgb(0,255,0);
-		}
-		41%{
-			box-shadow:0px -5px 10px rgb(0,255,127);
-		}
-		50%{
-			box-shadow:0px -5px 10px rgb(0,255,255);
-		}
-		58%{
-			box-shadow:0px -5px 10px rgb(0,127,255);
-		}
-		66%{
-			box-shadow:0px -5px 10px rgb(0,0,255);
-		}
-		75%{
-			box-shadow:0px -5px 10px rgb(127,0,255);
-		}
-		83%{
-			box-shadow:0px -5px 10px rgb(255,0,255);
-		}
-		91%{
-			box-shadow:0px -5px 10px rgb(255,0,127);
-		}
+  100%, 0% {
+    box-shadow: 0px -5px 10px rgb(255, 0, 0);
+  }
+
+  8% {
+    box-shadow: 0px -5px 10px rgb(255, 127, 0);
+  }
+
+  16% {
+    box-shadow: 0px -5px 10px rgb(255, 255, 0);
+  }
+
+  25% {
+    box-shadow: 0px -5px 10px rgb(127, 255, 0);
+  }
+
+  33% {
+    box-shadow: 0px -5px 10px rgb(0, 255, 0);
+  }
+
+  41% {
+    box-shadow: 0px -5px 10px rgb(0, 255, 127);
+  }
+
+  50% {
+    box-shadow: 0px -5px 10px rgb(0, 255, 255);
+  }
+
+  58% {
+    box-shadow: 0px -5px 10px rgb(0, 127, 255);
+  }
+
+  66% {
+    box-shadow: 0px -5px 10px rgb(0, 0, 255);
+  }
+
+  75% {
+    box-shadow: 0px -5px 10px rgb(127, 0, 255);
+  }
+
+  83% {
+    box-shadow: 0px -5px 10px rgb(255, 0, 255);
+  }
+
+  91% {
+    box-shadow: 0px -5px 10px rgb(255, 0, 127);
+  }
 }
 
 .desk-content .speakers {
@@ -515,66 +527,74 @@ body {
   background-color: #000008;
 }
 
-.desk-content .pokeball{
-  left:30px;
-  top:470px;
-  height:50px;
-  width:50px;
+.desk-content .pokeball {
+  left: 30px;
+  top: 470px;
+  height: 50px;
+  width: 50px;
   animation: 1s linear infinite pokeball-spin;
 }
 
 @keyframes pokeball-spin {
-  0%{
-    transform:rotate(0deg);
+  0% {
+    transform: rotate(0deg);
   }
-  100%{
-    transform:rotate(360deg);
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-.pokeball .top{
-  height:50px;
-  width:50px;
-  border-radius:50%;
-  background-color:red;
-}
-
-.pokeball .bottom{
-  top:25px;
-  height:25px;
-  width:50px;
-  border-bottom-left-radius:100px;
-  border-bottom-right-radius:100px;
-  background-color:white;
-}
-
-.pokeball .center{
-  top:22px;
-  height:6px;
-  width:50px;
-  background-color:black;
-}
-
-.pokeball .center::before{
-  content:"";
-  position: absolute;
-  left:12.5px;
-  top:-9px;
-  height:26px;
-  width:26px;
+.pokeball .top {
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  background-color:black;
+  background-color: red;
 }
 
-.pokeball .center::after{
-  content:"";
+.pokeball .bottom {
+  top: 25px;
+  height: 25px;
+  width: 50px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background-color: white;
+}
+
+.pokeball .center {
+  top: 22px;
+  height: 6px;
+  width: 50px;
+  background-color: black;
+}
+
+.pokeball .center::before {
+  content: "";
   position: absolute;
-  left:16px;
-  top:-5px;
-  height:18px;
-  width:18px;
+  left: 12.5px;
+  top: -9px;
+  height: 26px;
+  width: 26px;
   border-radius: 50%;
-  background-color:white;
+  background-color: black;
+}
+
+.pokeball .center::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: -5px;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.diglett {
+  width:100px;
+  height:auto;
+  top:140px;
+  left:680px;
 }
 
 /* projects section */
