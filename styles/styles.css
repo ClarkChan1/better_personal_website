@@ -110,10 +110,12 @@ body {
 }
 
 .desk {
+  position:absolute;
   top: 520px;
   height: 200px;
   width: 960px;
-  /* background-color: teal; */
+  background-color: black;
+  z-index:1;
 }
 
 .desk .surface {
@@ -616,16 +618,16 @@ body {
 
 .desk-content .lamp{
   position:absolute;
-  top:320px;
+  top:220px;
   left:120px;
-  height:200px;
-  width:100px;
-  background:pink;
+  height:300px;
+  width:200px;
+  /* background:pink; */
 }
 
 .lamp .base{
   position:absolute;
-  top:190px;
+  top:290px;
   left:30px;
   height:10px;
   width:70px;
@@ -648,7 +650,7 @@ body {
 
 .lamp .arm1{
   position:absolute;
-  top:70px;
+  top:170px;
   left:40px;
   height:100px;
   width:10px;
@@ -683,7 +685,7 @@ body {
 
 .lamp .arm2{
   position:absolute;
-  top:-25px;
+  top:75px;
   left:48px;
   height:100px;
   width:12px;
@@ -718,7 +720,7 @@ body {
 
 .lamp .head{
   transform: rotate(45deg);
-  top:-60px;
+  top:40px;
   left:74px;
   height:45px;
   width:45px;
@@ -739,6 +741,14 @@ body {
 	width: 45px;
 }
 
+.lamp .head:hover + .lightbulb{
+  background-color:#fbf2cc;
+}
+
+.lamp .head:hover ~ .light{
+  opacity: .2;
+}
+
 .lamp .head .ridge {
   height:12px;
   width:5px;
@@ -746,15 +756,26 @@ body {
   background:#984039;
 }
 
-.lamp .light{
+.lamp .lightbulb{
   left:125px;
-  top:-3px;
+  top:97px;
   height:10px;
   width:20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   transform:rotate(-45deg);
   background:rgb(211, 211, 211);
+}
+
+.lamp .light{
+  height:490px;
+  width:490px;
+  left:107px;
+  top:73px;
+  clip-path: polygon(0 10%, 10% 0, 100% 58%, 20% 58%);
+  background:rgb(233, 218, 140);
+  opacity:0;
+  z-index:0;
 }
 
 /* projects section */
