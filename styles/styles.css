@@ -778,6 +778,49 @@ body {
   z-index:0;
 }
 
+.desk-content .coffee{
+  height:60px;
+  width:60px;
+  left:308px;
+  top:460px;
+  /* filter: drop-shadow(0px 0px 5px grey); */
+  /* background:green; */
+}
+
+.coffee .base{
+  height:60px;
+  width:60px;
+  clip-path: polygon(15% 0, 85% 0, 75% 100%, 25% 100%);
+  background-color:white;
+}
+
+.coffee .wrap{
+  top:20px;
+  height:25px;
+  width:60px;
+  clip-path: polygon(15% 0, 85% 0, 80% 100%, 20% 100%);
+  background-color:rgb(153, 92, 29);
+}
+
+.coffee .top{
+  left:5px;
+  height:5px;
+  width:50px;
+  background-color:rgb(230, 230, 230);
+  border-radius: 1px;
+}
+
+.coffee .top::before{
+  content:"";
+  position:absolute;
+  top:-5px;
+  left:5px;
+  height:5px;
+  width:40px;
+  background-color:white;
+  border-radius: 1px;
+}
+
 /* projects section */
 #projects {
   background-color: purple;
