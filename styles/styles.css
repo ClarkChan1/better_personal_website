@@ -52,28 +52,32 @@ body {
   padding-bottom: 100px;
   z-index: 1;
   animation-name: glowing-name;
-  animation-duration: 4000ms;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
 }
 
 @keyframes glowing-name {
-  2.5% {
+  20%{
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+    opacity: 0.5;
+  }
+  21% {
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+    opacity: 0;
+  }
+
+  22% {
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+    opacity: 0.5;
+  }
+
+  23% {
     text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
     opacity: 0.2;
   }
 
-  5% {
-    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
-    opacity: 1;
-  }
-
-  7.5% {
-    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
-    opacity: 0.2;
-  }
-
-  10% {
+  24% {
     text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
     opacity: 1;
   }
@@ -512,7 +516,65 @@ body {
 }
 
 .desk-content .pokeball{
+  left:30px;
+  top:470px;
+  height:50px;
+  width:50px;
+  animation: 1s linear infinite pokeball-spin;
+}
 
+@keyframes pokeball-spin {
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+.pokeball .top{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  background-color:red;
+}
+
+.pokeball .bottom{
+  top:25px;
+  height:25px;
+  width:50px;
+  border-bottom-left-radius:100px;
+  border-bottom-right-radius:100px;
+  background-color:white;
+}
+
+.pokeball .center{
+  top:22px;
+  height:6px;
+  width:50px;
+  background-color:black;
+}
+
+.pokeball .center::before{
+  content:"";
+  position: absolute;
+  left:12.5px;
+  top:-9px;
+  height:26px;
+  width:26px;
+  border-radius: 50%;
+  background-color:black;
+}
+
+.pokeball .center::after{
+  content:"";
+  position: absolute;
+  left:16px;
+  top:-5px;
+  height:18px;
+  width:18px;
+  border-radius: 50%;
+  background-color:white;
 }
 
 /* projects section */
