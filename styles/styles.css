@@ -1099,8 +1099,8 @@ body {
   height: 20px;
   width: 16px;
   clip-path: ellipse(25% 40% at 50% 50%);
-  transform:rotate(48deg);
-  background:white;
+  transform:rotate(50deg);
+  background:rgb(255, 235, 175);
   z-index: 1;
 }
 
