@@ -588,6 +588,68 @@ body {
   z-index: 0;
 }
 
+@keyframes glowing-bottle-top {
+  50% {
+    /* box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, 0 0 10px white; */
+    box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, inset 0 0 10px white, inset 0 0 15px white;
+  }
+}
+
+@keyframes glowing-bottle-bottom {
+  50% {
+    /* box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, 0 0 10px white; */
+    box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, inset 0 0 10px white, inset 0 0 20px white, inset 0 0 30px white;
+  }
+}
+
+.nuka-cola .sticker {
+  top: 20px;
+  left: 1px;
+  height: 35px;
+  width: 30px;
+  z-index: 1;
+}
+
+.desk-content .minecraft-head {
+  height: 64px;
+  width: 64px;
+  left: 800px;
+  top: 456px;
+  background-color: #212121;
+}
+
+.minecraft-head .eye-white {
+  height: 8px;
+  width: 24px;
+  background-color: #e07afa;
+  /* box-shadow: 0px 0px 5px #e07afa; */
+}
+
+.minecraft-head .eye-pupil {
+  height: 8px;
+  width: 8px;
+  background-color: #cd00fc;
+  /* box-shadow: 0px 0px 5px #cd00fc; */
+}
+
+.minecraft-head .decal1 {
+  height: 16px;
+  width: 8px;
+  background-color: #000008;
+}
+
+.minecraft-head .decal2 {
+  height: 8px;
+  width: 8px;
+  background-color: #000008;
+}
+
+.minecraft-head .decal3 {
+  height: 8px;
+  width: 16px;
+  background-color: #000008;
+}
+
 .nuka-cola {
   left: 750px;
   top: 449px;
@@ -650,68 +712,6 @@ body {
   animation-duration: 1000ms;
   animation-iteration-count: infinite;
   /* box-shadow: inset 0 0 10px white; */
-}
-
-@keyframes glowing-bottle-top {
-  50% {
-    /* box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, 0 0 10px white; */
-    box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, inset 0 0 10px white, inset 0 0 15px white;
-  }
-}
-
-@keyframes glowing-bottle-bottom {
-  50% {
-    /* box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, 0 0 10px white; */
-    box-shadow: 0 0 15px #63edf0, 0 0 50px #63edf0, inset 0 0 10px white, inset 0 0 20px white, inset 0 0 30px white;
-  }
-}
-
-.nuka-cola .sticker {
-  top: 20px;
-  left: 1px;
-  height: 35px;
-  width: 30px;
-  z-index: 1;
-}
-
-.desk-content .minecraft-head {
-  height: 64px;
-  width: 64px;
-  left: 820px;
-  top: 456px;
-  background-color: #212121;
-}
-
-.minecraft-head .eye-white {
-  height: 8px;
-  width: 24px;
-  background-color: #e07afa;
-  /* box-shadow: 0px 0px 5px #e07afa; */
-}
-
-.minecraft-head .eye-pupil {
-  height: 8px;
-  width: 8px;
-  background-color: #cd00fc;
-  /* box-shadow: 0px 0px 5px #cd00fc; */
-}
-
-.minecraft-head .decal1 {
-  height: 16px;
-  width: 8px;
-  background-color: #000008;
-}
-
-.minecraft-head .decal2 {
-  height: 8px;
-  width: 8px;
-  background-color: #000008;
-}
-
-.minecraft-head .decal3 {
-  height: 8px;
-  width: 16px;
-  background-color: #000008;
 }
 
 .desk-content .pokeball {
@@ -1049,6 +1049,61 @@ body {
   border-top-right-radius: 1px;
   background-color: rgb(3, 47, 199);
 }
+
+.desk-content .dragon-ball{
+  left: 880px;
+  top: 470px;
+  height: 50px;
+  width: 50px;
+  border-radius:50%;
+  background:#ee681f;
+}
+
+.dragon-ball::before{
+  content:"";
+  position:absolute;
+  top:7px;
+  left:7px;
+  height: 38px;
+  width: 38px;
+  border-radius:50%;
+  background:#f7941d;
+}
+
+.dragon-ball::after{
+  content:"";
+  position:absolute;
+  top:5px;
+  left:7px;
+  height: 20px;
+  width: 20px;
+  border-radius:50%;
+  background:#f36523;
+}
+
+.dragon-ball .star{
+  position:absolute;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  top:18px;
+  left:18px;
+  height: 14px;
+  width: 14px;
+  background:red;
+  z-index: 1;
+}
+
+.dragon-ball .shine{
+  position:absolute;
+  top:0px;
+  left:6px;
+  height: 20px;
+  width: 16px;
+  clip-path: ellipse(25% 40% at 50% 50%);
+  transform:rotate(48deg);
+  background:white;
+  z-index: 1;
+}
+
 
 /* projects section */
 #projects {
