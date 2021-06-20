@@ -194,6 +194,7 @@ body {
   border-radius: 50%;
   background: rgb(255, 88, 88);
   box-shadow: 0px 0px 10px red;
+
 }
 
 .gaming-pc .power-button::before {
@@ -206,6 +207,7 @@ body {
   border-radius: 50%;
   background: rgb(255, 88, 88);
   box-shadow: 0px 0px 10px red;
+
 }
 
 .gaming-pc .power-button::after {
@@ -218,6 +220,7 @@ body {
   border-radius: 50%;
   background: rgb(255, 88, 88);
   box-shadow: 0px 0px 10px red;
+
 }
 
 .gaming-pc .light-strip1 {
@@ -228,6 +231,7 @@ body {
   transform: rotate(-33deg);
   background: rgb(255, 88, 88);
   box-shadow: 0px 0px 10px red;
+
 }
 
 .gaming-pc .light-strip2 {
@@ -238,6 +242,7 @@ body {
   box-shadow: 0px 0px 10px red;
 }
 
+
 .gaming-pc .corner-cut1{
   height:10px;
   width:10px;
@@ -246,12 +251,79 @@ body {
 }
 
 .gaming-pc .corner-cut2{
-  top:140px;
-  left:90px;
-  height:10px;
-  width:10px;
+  top:130px;
+  left:80px;
+  height:20px;
+  width:20px;
   clip-path: polygon(0 100%, 100% 0, 100% 100%);
   background: black;
+}
+
+/* make the lights change colors on the pc */
+.gaming-pc .light-strip1, .gaming-pc .light-strip2, .gaming-pc .power-button, .gaming-pc .power-button::before, .gaming-pc .power-button::after{
+  animation-name: pc-rainbow;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pc-rainbow {
+  100%, 0% {
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+    background: rgb(255, 88, 88);
+  }
+
+  8% {
+    box-shadow: 0px 0px 10px rgb(255, 127, 0);
+  }
+
+  16% {
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+  }
+
+  25% {
+    box-shadow: 0px 0px 10px rgb(127, 255, 0);
+    background: rgb(171, 255, 88);
+  }
+
+  33% {
+    box-shadow: 0px 0px 10px rgb(0, 255, 0);
+    background: rgb(88, 255, 88);
+  }
+
+  41% {
+    box-shadow: 0px 0px 10px rgb(0, 255, 127);
+    background: rgb(88, 255, 171);
+  }
+
+  50% {
+    box-shadow: 0px 0px 10px rgb(0, 255, 255);
+    background: rgb(88, 255, 255);
+  }
+
+  58% {
+    box-shadow: 0px 0px 10px rgb(0, 127, 255);
+    background: rgb(88, 171, 255);
+  }
+
+  66% {
+    box-shadow: 0px 0px 10px rgb(0, 0, 255);
+    background: rgb(88, 88, 255);
+  }
+
+  75% {
+    box-shadow: 0px 0px 10px rgb(127, 0, 255);
+    background: rgb(171, 88, 255);
+  }
+
+  83% {
+    box-shadow: 0px 0px 10px rgb(255, 0, 255);
+    background: rgb(255, 88, 255);
+  }
+
+  91% {
+    box-shadow: 0px 0px 10px rgb(255, 0, 127);
+    background: rgb(255, 88, 171);
+  }
 }
 
 
