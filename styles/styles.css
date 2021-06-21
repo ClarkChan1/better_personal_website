@@ -47,7 +47,7 @@ body {
 
 .intro {
   text-align: center;
-  /* background-color: green; */
+  background-color: purple;
   padding-top: 100px;
   padding-bottom: 100px;
   z-index: 1;
@@ -93,10 +93,16 @@ body {
   font-size: 20px;
 }
 
+.programming-icons{
+  height:200px;
+  width:960px;
+  background:pink;
+}
+
 /* computer setup art */
 .computer-art-container {
-  /* background-color: cyan; */
-  height: 720px;
+  background-color: teal;
+  height: 520px;
   width: 960px;
   /* we want all the children to be positioned relative to the top left corner of this container, and the way absolute positioning works
   is that it uses the first parent with a relative or absolute position, so if this wasn't here, and all the children used absolute positioning, the top left corner would be
@@ -111,10 +117,10 @@ body {
 
 .desk {
   position: absolute;
-  top: 520px;
+  top: 320px;
   height: 200px;
   width: 960px;
-  background-color: black;
+  /* background-color: black; */
   z-index: 1;
 }
 
@@ -322,14 +328,14 @@ body {
 }
 
 .desk-content {
-  height: 520px;
+  height: 320px;
   width: 960px;
   /* background-color: rgb(245, 159, 237); */
 }
 
 .desk-content .computer {
   position: relative;
-  top: 310px;
+  top: 110px;
   left: 365px;
 }
 
@@ -460,7 +466,7 @@ body {
 
 .desk-content .speakers {
   position: absolute;
-  top: 415px;
+  top: 215px;
   left: 250px;
 }
 
@@ -608,7 +614,7 @@ body {
   height: 64px;
   width: 64px;
   left: 800px;
-  top: 456px;
+  top: 256px;
   background-color: #212121;
 }
 
@@ -646,7 +652,7 @@ body {
 
 .nuka-cola {
   left: 750px;
-  top: 449px;
+  top: 249px;
   height: 70px;
   width: 30px;
   /* background-color:yellow; */
@@ -710,7 +716,7 @@ body {
 
 .desk-content .pokeball {
   left: 30px;
-  top: 470px;
+  top: 270px;
   height: 50px;
   width: 50px;
   animation: 1s linear infinite pokeball-spin;
@@ -775,7 +781,7 @@ body {
   height: 60px;
   width: 60px;
   left: 308px;
-  top: 460px;
+  top: 260px;
   /* filter: drop-shadow(0px 0px 5px grey); */
   /* background:green; */
 }
@@ -816,7 +822,7 @@ body {
 
 .desk-content .lamp {
   position: absolute;
-  top: 220px;
+  top: 20px;
   left: 120px;
   height: 300px;
   width: 200px;
@@ -978,7 +984,7 @@ body {
 
 .desk-content .pencil-holder {
   left: 100px;
-  top: 440px;
+  top: 240px;
   height: 80px;
   width: 50px;
   /* background-color: green; */
@@ -1046,7 +1052,7 @@ body {
 
 .desk-content .dragon-ball {
   left: 880px;
-  top: 470px;
+  top: 270px;
   height: 50px;
   width: 50px;
   border-radius: 50%;
