@@ -47,9 +47,9 @@ body {
 
 .intro {
   text-align: center;
-  background-color: purple;
+  /* background-color: purple; */
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 31px;
   z-index: 1;
   animation-name: glowing-name;
   animation-duration: 10s;
@@ -86,22 +86,21 @@ body {
 
 #welcome-section h1 {
   font-size: 50px;
-  /*   background-color:green; */
 }
 
 #welcome-section p {
   font-size: 20px;
 }
 
-.programming-icons{
-  height:200px;
-  width:960px;
-  background:pink;
+.programming-icons {
+  height: 200px;
+  width: 960px;
+  /* background:pink; */
 }
 
 /* computer setup art */
 .computer-art-container {
-  background-color: teal;
+  /* background-color: teal; */
   height: 520px;
   width: 960px;
   /* we want all the children to be positioned relative to the top left corner of this container, and the way absolute positioning works
@@ -120,7 +119,7 @@ body {
   top: 320px;
   height: 200px;
   width: 960px;
-  /* background-color: black; */
+  background-color: black;
   z-index: 1;
 }
 
@@ -470,7 +469,7 @@ body {
   left: 250px;
 }
 
-.desk-content .speaker1 {
+.desk-content .speaker {
   position: absolute;
   height: 100px;
   width: 75px;
@@ -479,7 +478,7 @@ body {
   z-index: 0;
 }
 
-.desk-content .speaker1::before {
+.desk-content .speaker::before {
   content: "";
   position: absolute;
   top: 100px;
@@ -491,7 +490,7 @@ body {
   z-index: 0;
 }
 
-.desk-content .speaker1::after {
+.desk-content .speaker::after {
   content: "";
   position: absolute;
   top: 100px;
@@ -503,7 +502,7 @@ body {
   z-index: 0;
 }
 
-.desk-content .speaker1 .little-circle {
+.desk-content .speaker .little-circle {
   position: absolute;
   left: 23px;
   top: 10px;
@@ -514,7 +513,7 @@ body {
   z-index: 1;
 }
 
-.desk-content .speaker1 .little-circle::before {
+.desk-content .speaker .little-circle::before {
   content: "";
   position: absolute;
   left: 5px;
@@ -526,7 +525,7 @@ body {
   z-index: 2;
 }
 
-.desk-content .speaker1 .little-circle::after {
+.desk-content .speaker .little-circle::after {
   content: "";
   position: absolute;
   left: 10px;
@@ -538,7 +537,7 @@ body {
   z-index: 3;
 }
 
-.desk-content .speaker1 .big-circle {
+.desk-content .speaker .big-circle {
   position: absolute;
   left: 13px;
   top: 40px;
@@ -549,7 +548,7 @@ body {
   z-index: 1;
 }
 
-.desk-content .speaker1 .big-circle::before {
+.desk-content .speaker .big-circle::before {
   content: "";
   position: absolute;
   left: 5px;
@@ -561,7 +560,7 @@ body {
   z-index: 2;
 }
 
-.desk-content .speaker1 .big-circle::after {
+.desk-content .speaker .big-circle::after {
   content: "";
   position: absolute;
   left: 15px;
@@ -571,10 +570,6 @@ body {
   border-radius: 50%;
   background-color: #446b7f;
   z-index: 3;
-}
-
-#speaker2 {
-  left: 400px;
 }
 
 .desk-content .mouse {
@@ -824,8 +819,8 @@ body {
   position: absolute;
   top: 20px;
   left: 120px;
-  height: 300px;
-  width: 200px;
+  height: 0px;
+  width: 0px;
   /* background:pink; */
 }
 
@@ -949,10 +944,6 @@ body {
   background-color: #fbf2cc;
 }
 
-.lamp .head:hover~.light {
-  opacity: .2;
-}
-
 .lamp .head .ridge {
   height: 12px;
   width: 5px;
@@ -978,7 +969,7 @@ body {
   top: 73px;
   clip-path: polygon(0 10%, 10% 0, 100% 58%, 20% 58%);
   background: rgb(233, 218, 140);
-  opacity: 0;
+  opacity: .2;
   z-index: 0;
 }
 
