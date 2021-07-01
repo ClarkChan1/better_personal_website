@@ -1,11 +1,29 @@
+function showPleaseStandby(computerScreen) {
+  computerScreen.src = "gifs/please-stand-by.gif";
+}
+
+function showCode(computerScreen) {
+  computerScreen.src = "gifs/code.gif";
+}
+
+// this is for when the user hovers over the computer screen, it will show the fallout please standby gif
+function addListenerComputer() {
+  let computerScreen = document.querySelector('.computer-screen');
+  computerScreen.addEventListener('mouseover', function() {
+    showPleaseStandby(computerScreen);
+  });
+  computerScreen.addEventListener('mouseout', function() {
+    showCode(computerScreen);
+  });
+}
+
 function lightUpLamp(lamp) {
   let light = document.createElement('div');
   light.classList.add('light');
   lamp.appendChild(light);
-
 }
 
-function removeLightLamp(lamp){
+function removeLightLamp(lamp) {
   lamp.removeChild(lamp.querySelector('.light'));
 }
 
@@ -15,11 +33,11 @@ function addListenerLamp() {
   let lampHead = document.querySelector('.lamp .head');
   console.log(lampHead);
   // for when user mouses over
-  lampHead.addEventListener('mouseover', function(){
+  lampHead.addEventListener('mouseover', function() {
     lightUpLamp(lamp);
   });
   // remove the light div when user stops hovering
-  lampHead.addEventListener('mouseout', function(){
+  lampHead.addEventListener('mouseout', function() {
     removeLightLamp(lamp);
   });
 }
@@ -44,5 +62,6 @@ function addListenerSpeakers() {
 }
 
 // calling all the logic
+addListenerComputer();
 addListenerLamp();
 addListenerSpeakers();
