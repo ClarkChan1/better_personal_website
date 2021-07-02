@@ -84,18 +84,33 @@ body {
   }
 }
 
-#welcome-section h1 {
-  font-size: 50px;
-}
-
-#welcome-section p {
-  font-size: 20px;
-}
-
 .programming-icons {
   height: 200px;
   width: 960px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:50px;
   /* background:pink; */
+  font-size:10px;
+}
+
+.programming-icons .icon-and-name{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items: center;
+}
+
+.programming-icons .icon-and-name .icon{
+  width:auto;
+  height:80px;
+  transition: transform .5s;
+}
+
+.programming-icons .icon-and-name .icon:hover{
+  transform: scale(1.2);
 }
 
 /* computer setup art */

@@ -62,7 +62,6 @@ function moveDiglett(e){
   console.log("in moveDiglett");
   this.classList.add('fade-out-diglett');
   let diglett = this;
-  
   // make diglett reappear after 3 seconds
   setTimeout(function(){
     // move diglett to a random location horizontally
