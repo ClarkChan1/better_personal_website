@@ -169,6 +169,12 @@ body {
   height: auto;
   top: 140px;
   left: 680px;
+  transition: opacity 1s;
+}
+
+.fade-out-diglett {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .gaming-pc {
@@ -673,7 +679,6 @@ body {
   height: 40px;
   width: 12px;
   background: #63edf0;
-  /* background: #63edf0; */
   z-index: 1;
   box-shadow: 0 0 10px #63edf0;
   border: 1px solid white;

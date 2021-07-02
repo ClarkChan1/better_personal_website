@@ -31,7 +31,6 @@ function removeLightLamp(lamp) {
 function addListenerLamp() {
   let lamp = document.querySelector('.lamp');
   let lampHead = document.querySelector('.lamp .head');
-  console.log(lampHead);
   // for when user mouses over
   lampHead.addEventListener('mouseover', function() {
     lightUpLamp(lamp);
@@ -43,13 +42,11 @@ function addListenerLamp() {
 }
 
 function playMusic(speaker) {
-  console.log("in function playMusic");
+  let song = document.querySelector(".BP-Song");
+  song.play();
 }
 
-function lightUpSpeaker(speaker) {
-  console.log("in function lightUpSpeaker");
-
-}
+function lightUpSpeaker(speaker) {}
 
 // function to make speakers light up and play music on mouseover
 function addListenerSpeakers() {
@@ -61,7 +58,28 @@ function addListenerSpeakers() {
   }
 }
 
+function moveDiglett(e){
+  console.log("in moveDiglett");
+  this.classList.add('fade-out-diglett');
+  let diglett = this;
+  
+  // make diglett reappear after 3 seconds
+  setTimeout(function(){
+    // move diglett to a random location horizontally
+    let min = 0;
+    let max = 860;
+    diglett.style.left = Math.floor(Math.random() * (max - min + 1) + min) + 'px';
+    diglett.classList.remove('fade-out-diglett');
+  }, 3000);
+}
+
+function addListenerDiglett(){
+  let diglett = document.querySelector('.diglett');
+  diglett.addEventListener('mouseenter', moveDiglett);
+}
+
 // calling all the logic
 addListenerComputer();
 addListenerLamp();
-addListenerSpeakers();
+// addListenerSpeakers();
+addListenerDiglett();
