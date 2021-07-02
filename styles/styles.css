@@ -87,30 +87,38 @@ body {
 .programming-icons {
   height: 200px;
   width: 960px;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap:50px;
+  gap: 50px;
   /* background:pink; */
-  font-size:10px;
+  font-size: 10px;
 }
 
-.programming-icons .icon-and-name{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+.programming-icons p{
+  opacity:0;
+}
+
+.programming-icons .icon-and-name {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
 }
 
-.programming-icons .icon-and-name .icon{
-  width:auto;
-  height:80px;
+.programming-icons .icon-and-name .icon {
+  width: auto;
+  height: 80px;
   transition: transform .5s;
 }
 
-.programming-icons .icon-and-name .icon:hover{
+.programming-icons .icon-and-name .icon:hover {
   transform: scale(1.2);
+}
+
+.programming-icons .icon-and-name .icon:hover + p{
+  opacity:1;
 }
 
 /* computer setup art */
