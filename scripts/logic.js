@@ -62,8 +62,8 @@ function addListenerSpeakers() {
 }
 
 function moveDiglett(e) {
-  this.classList.add('fade-out-diglett');
   let diglett = this;
+  diglett.classList.add('fade-out-diglett');
   // make diglett reappear after 3 seconds
   setTimeout(function() {
     // move diglett to a random location horizontally
