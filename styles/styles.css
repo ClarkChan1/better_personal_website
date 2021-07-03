@@ -96,8 +96,8 @@ body {
   font-size: 10px;
 }
 
-.programming-icons p{
-  opacity:0;
+.programming-icons p {
+  opacity: 0;
 }
 
 .programming-icons .icon-and-name {
@@ -117,8 +117,8 @@ body {
   transform: scale(1.2);
 }
 
-.programming-icons .icon-and-name .icon:hover + p{
-  opacity:1;
+.programming-icons .icon-and-name .icon:hover+p {
+  opacity: 1;
 }
 
 /* computer setup art */
@@ -634,11 +634,16 @@ body {
   z-index: 1;
 }
 
-.desk-content .minecraft-head {
-  height: 64px;
-  width: 64px;
+.desk-content .minecraft {
+  /* height: 64px; */
+  /* width: 64px; */
   left: 800px;
   top: 256px;
+}
+
+.minecraft-head {
+  height: 64px;
+  width: 64px;
   background-color: #212121;
 }
 
@@ -672,6 +677,12 @@ body {
   height: 8px;
   width: 16px;
   background-color: #000008;
+}
+
+.flake-dot {
+  height: 2px;
+  width: 2px;
+  background-color: #cd00fc;
 }
 
 .nuka-cola {
