@@ -54,7 +54,11 @@ body {
   animation-name: glowing-name;
   animation-duration: 10s;
   animation-iteration-count: infinite;
-  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
+  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+}
+
+.intro p{
+  text-shadow: 0 0 10px #ff1414, 0 0 20px #ff1414, 0 0 30px #ff1414, 0 0 40px #ff1414;
 }
 
 @keyframes glowing-name {
