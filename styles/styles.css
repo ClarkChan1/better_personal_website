@@ -1,8 +1,5 @@
 html {
   font-family: 'Oswald', sans-serif;
-  font-family: 'Nixie One', cursive;
-  font-family: 'VT323', monospace;
-  font-family: 'Press Start 2P', cursive;
   color: white;
 }
 
@@ -38,10 +35,12 @@ body {
 #welcome-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 100vh;
   margin: auto;
   width: 960px;
   background-color: black;
+  font-family: 'Press Start 2P', cursive;
 }
 
 @media screen and (max-height:1024px) {
@@ -53,8 +52,6 @@ body {
 .intro {
   text-align: center;
   /* background-color: purple; */
-  padding-top: 100px;
-  padding-bottom: 31px;
   z-index: 1;
   animation-name: glowing-name;
   animation-duration: 10s;
