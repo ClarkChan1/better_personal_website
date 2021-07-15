@@ -1250,6 +1250,8 @@ body {
   font-size: 24px;
   align-items: center;
   transition: transform .5s ease-out;
+  text-decoration: none;
+  color:white;
 }
 
 .contact-options .icon-and-name:hover {
