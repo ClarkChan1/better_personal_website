@@ -38,11 +38,16 @@ body {
 #welcome-section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: 1300px;
+  height: 100vh;
   margin: auto;
   width: 960px;
   background-color: black;
+}
+
+@media screen and (max-height:1024px) {
+  #welcome-section {
+    height: 1024px;
+  }
 }
 
 .intro {
@@ -57,7 +62,7 @@ body {
   text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
 }
 
-.intro p{
+.intro p {
   text-shadow: 0 0 10px #ff1414, 0 0 20px #ff1414, 0 0 30px #ff1414, 0 0 40px #ff1414;
 }
 
@@ -1142,8 +1147,48 @@ body {
 
 /* projects section */
 #projects {
-  background-color: purple;
-  height: 100vh;
+  /* background-color: purple; */
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+}
+
+.projects-grid {
+  margin: 0 auto;
+  padding: 4em;
+  display: grid;
+  grid-gap: 4em;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.project-card {
+  text-align: center;
+  background-color: rgb(64, 77, 116);
+}
+
+.project-card p {
+  line-height: 64px;
+  font-size: 36px;
+  margin: 0;
+}
+
+.project-card .project-link-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.project-card .project-link-group a {
+  line-height: 64px;
+  color:white;
+  font-size: 24px;
+  margin: 0;
+  text-decoration:none;
+}
+
+.project-card .project-link-group a:hover {
+  color:grey;
+}
+
+.project-card .project-img {
   width: 100%;
 }
 
