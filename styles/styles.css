@@ -1225,6 +1225,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 #contact h1 {
@@ -1240,6 +1241,7 @@ body {
   gap: 100px;
   height: 100%;
   align-items: center;
+  padding:100px;
 }
 
 .contact-options .icon-and-name {
@@ -1251,7 +1253,7 @@ body {
   align-items: center;
   transition: transform .5s ease-out;
   text-decoration: none;
-  color:white;
+  color: white;
 }
 
 .contact-options .icon-and-name:hover {
@@ -1260,4 +1262,23 @@ body {
 
 .contact-options .icon-and-name img {
   width: 50px;
+}
+
+.sally-pic {
+  position: absolute;
+  bottom: 0px;
+  left: -200px;
+  /* background: pink; */
+  animation-name: sally;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sally {
+  50% {
+    left: -30px;
+  }
+  70%, 100% {
+    left: -200px;
+  }
 }
