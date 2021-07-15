@@ -1254,10 +1254,13 @@ body {
   transition: transform .5s ease-out;
   text-decoration: none;
   color: white;
+  padding-top:20px;
+  padding-bottom:20px;
+
 }
 
 .contact-options .icon-and-name:hover {
-  transform: translateY(10px);
+  transform: translateY(15px);
 }
 
 .contact-options .icon-and-name img {
